@@ -18,9 +18,8 @@ module baud_genrator(
 	output MISO_send_sclk0
 );
 	//internal signal 
-	wire S_clock, BD,
-	reg [11:0]count;
-	count = 12'b1;
+	wire S_clock, BD;
+	reg [11:0] count;
 	
 	//parameters for the modes of SPI
 	
