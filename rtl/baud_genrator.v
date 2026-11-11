@@ -54,7 +54,7 @@ module baud_genrator(
 			end
 			else begin 
 				count <= 12'b0;
-				s_clk <= s_clk;
+				s_clk <= S_clock;
 			end 
 		end 
 	end 
