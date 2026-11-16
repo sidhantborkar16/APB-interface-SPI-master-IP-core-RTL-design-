@@ -10,7 +10,7 @@ z2
 cModel Technology
 dC:/windows/system32
 vbaud_genrator
-Z0 !s110 1794819749
+Z0 !s110 1794820113
 !i10b 1
 !s100 a80lMk^eoDnK@Z91N`[cD1
 Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -20,13 +20,13 @@ Z3 dE:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-d
 w1794807038
 8E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/baud_genrator.v
 FE:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/baud_genrator.v
-!i122 7
+!i122 9
 L0 1 146
 Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1794819749.000000
+!s108 1794820113.000000
 !s107 E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/baud_genrator.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/baud_genrator.v|
 !i113 1
@@ -35,21 +35,21 @@ Z6 tCvgOpt 0
 vbaud_genrator_tb
 R0
 !i10b 1
-!s100 15X]3aDfWlW2FaZV5FZZ:0
+!s100 Y9l9hXd4hUChBhHUVDT^M0
 R1
-IWP9cokA=b0f;ShX`R2zE80
+ISN?HIIRgCWY?Y2o;YI=DU0
 R2
 R3
-w1794819734
+w1794819864
 8E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/baud_genrator_tb.v
 FE:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/baud_genrator_tb.v
-!i122 6
+!i122 8
 L0 1 95
 R4
 r1
 !s85 0
 31
-!s108 1794819748.000000
+!s108 1794820112.000000
 !s107 E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/baud_genrator_tb.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/baud_genrator_tb.v|
 !i113 1

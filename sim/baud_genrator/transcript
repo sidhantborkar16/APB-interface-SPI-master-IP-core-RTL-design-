@@ -21,3 +21,14 @@ run
 # GetModuleFileName: The specified module could not be found.
 # 
 # 
+# Compile of baud_genrator_tb.v was successful.
+# Compile of baud_genrator.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.baud_genrator_tb
+# Loading work.baud_genrator
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
