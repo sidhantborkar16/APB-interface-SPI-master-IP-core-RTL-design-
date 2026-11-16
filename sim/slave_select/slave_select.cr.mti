@@ -1,0 +1,15 @@
+{E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/slave_select.v} {1 {vlog -work work -stats=none {E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/slave_select.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module slave_select
+
+Top level modules:
+	slave_select
+
+} {} {}} {E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/slave_select_tb.v} {1 {vlog -work work -stats=none {E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/slave_select_tb.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module slave_select_tb
+
+Top level modules:
+	slave_select_tb
+
+} {} {}}

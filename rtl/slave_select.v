@@ -1,5 +1,5 @@
 module slave_select(
-	input p_clk, send_data, mstr, spi_mode, PRESETn, SPISWAI,
+	input p_clk, send_data, mstr, PRESETn, SPISWAI,
 	input [1:0]spi_mod,
 	input [11:0] BD,
 	
@@ -31,8 +31,8 @@ module slave_select(
 		else begin 
 			if((spi_mod == RUN || (spi_mod == WAIT && SPISWAI == 0)) && mstr) begin 
 				if(send_data == 0) begin 
-					if(count <= target - 1) begin 
-						count = count + 1;
+					if(count < (target - 1)) begin 
+						count <= count + 1;
 						ss_out <= 1'b0;
 					end 
 					else begin 

@@ -58,7 +58,6 @@ module baud_genrator(
 			end 
 		end 
 	end 
-	
 
 	//flage genration send flag
 	always @(posedge p_clk or negedge PRESETn) begin 
@@ -67,11 +66,11 @@ module baud_genrator(
 			MOSI_send_neg <= 1'b0;
 		end 
 		else begin 
-			if(cpol ^ cphase)begin
+			if(cpol ^ cphase)begin  //(!cpol && cphase)||(cpol && !cphase)
 				if(s_clk) begin 
-					if(count == (BD/2) - 2) begin 
-						MOSI_send_pos <= 1'b1;
-						MOSI_send_neg <= 1'b0;
+					if(count == (BD/2) - 2'b10) begin 
+						MOSI_send_pos <= 1'b0;
+						MOSI_send_neg <= 1'b1; 
 					end
 					else begin
 						MOSI_send_pos <= 1'b0;
@@ -85,9 +84,9 @@ module baud_genrator(
 			end 
 			else begin 
 				if (s_clk == 0) begin 
-					if(count == (BD/2) - 2) begin 
-						MOSI_send_pos <= 1'b0;
-						MOSI_send_neg <= 1'b1;
+					if(count == (BD/2) - 2'b10) begin 
+						MOSI_send_pos <= 1'b1;
+						MOSI_send_neg <= 1'b0;
 					end
 					else begin
 						MOSI_send_pos <= 1'b0;
@@ -111,7 +110,7 @@ module baud_genrator(
 		else begin 
 			if(cpol ^ cphase)begin
 				if(s_clk) begin 
-					if(count == (BD/2) - 1) begin 
+					if(count == (BD/2) - 2'b01) begin 
 						MISO_receive_pos <= 1'b0;
 						MISO_receive_neg <= 1'b1;
 					end
@@ -127,7 +126,7 @@ module baud_genrator(
 			end 
 			else begin 
 				if (s_clk == 0) begin 
-					if(count == (BD/2) - 1) begin 
+					if(count == (BD/2) - 2'b01) begin 
 						MISO_receive_pos <= 1'b1;
 						MISO_receive_neg <= 1'b0;
 					end
@@ -142,6 +141,103 @@ module baud_genrator(
 				end  
 			end 
 		end 
+	end 
+
+endmodule
+	
+	/*always @(posedge p_clk or negedge PRESETn) begin 
+		if(!PRESETn) begin 
+			count <= 12'b0;
+			s_clk <= S_clock;
+		end 
+		else if((spi_mod == RUN || (spi_mod == WAIT)) && spi_ss == 0)begin 
+			if(count == (BD/2)-1) begin 
+				count <= 12'b0;
+				s_clk <= ~s_clk;
+			end 
+			else begin 
+				count <= count + 1;
+				s_clk <= s_clk;
+			end 
+		end
+		else begin 
+			count <= 12'b0;
+			s_clk <= S_clock;
+		end 
 	end
 
-endmodule 
+	always @(posedge p_clk or negedge PRESETn) begin 
+		if(!PRESETn) begin 
+			MOSI_send_pos <= 1'b0;
+			MOSI_send_neg <= 1'b0;
+		end
+		else if(cpol ^ cphase) begin 
+			if (s_clk) begin 
+				if(count == ((BD/2) - 2)) begin 
+					MOSI_send_pos <= 1'b1;
+					//MOSI_send_neg <= 1'b0;
+				end
+				else begin 
+					MOSI_send_pos <= 1'b0;
+				end 
+			end
+			else begin 
+				MOSI_send_pos <= 1'b0;
+				//MOSI_send_neg <= 1'b0;
+			end 
+		end 
+		else begin 
+			if (s_clk) begin 
+				//MOSI_send_pos <= 1'b0;
+				MOSI_send_neg <= 1'b0;
+			end
+			else begin 
+				if(count == ((BD/2) - 2)) begin 
+					//MOSI_send_pos <= 1'b0;
+					MOSI_send_neg <= 1'b1;
+				end 
+				else begin 
+					MOSI_send_neg <= 1'b0;
+				end 
+			end
+		end 
+	end 
+	
+	
+	always @(posedge p_clk or negedge PRESETn) begin 
+		if(!PRESETn) begin 
+			MISO_receive_pos <= 1'b0;
+			MISO_receive_neg <= 1'b0;
+		end
+		else if(cpol ^ cphase) begin 
+			if (s_clk) begin 
+				if(count == ((BD/2) - 1)) begin 
+					//MISO_receive_pos <= 1'b0;
+					MISO_receive_neg <= 1'b1;
+				end
+				else begin 
+					MISO_receive_neg <= 1'b0;
+				end 
+			end
+			else begin 
+				//MISO_receive_pos <= 1'b0;
+				MISO_receive_neg <= 1'b0;
+			end 
+		end 
+		else begin 
+			if (s_clk) begin 
+				MISO_receive_pos <= 1'b0;
+				//MISO_receive_neg <= 1'b0;
+			end
+			else begin 
+				if(count == ((BD/2) - 1)) begin 
+					MISO_receive_pos <= 1'b1;
+					//MISO_receive_neg <= 1'b0;
+				end 
+				else begin 
+					MISO_receive_pos <= 1'b0;
+				end 
+			end
+		end 
+	end
+endmodule */

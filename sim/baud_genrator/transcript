@@ -3,18 +3,21 @@
 # 2 compiles, 0 failed with no errors.
 vsim -gui work.baud_genrator_tb
 # vsim -gui work.baud_genrator_tb 
-# Start time: 23:22:49 on Nov 09,2026
+# Start time: 13:13:27 on Nov 16,2026
 # Loading work.baud_genrator_tb
 # Loading work.baud_genrator
 add wave -position insertpoint sim:/baud_genrator_tb/*
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: karna  Hostname: ROHAN  ProcessID: 1228
-#           Attempting to use alternate WLF file "./wlftm6jdz8".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftm6jdz8
 add wave -position insertpoint sim:/baud_genrator_tb/dut/*
 run
-# ** Note: $finish    : E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/baud_genrator_tb.v(91)
-#    Time: 620 ps  Iteration: 0  Instance: /baud_genrator_tb
-# 1
-# Break in Module baud_genrator_tb at E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/baud_genrator_tb.v line 91
+# WARNING: No extended dataflow license exists
+# Compile of baud_genrator_tb.v was successful.
+# Compile of baud_genrator.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.baud_genrator_tb
+# Loading work.baud_genrator
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 

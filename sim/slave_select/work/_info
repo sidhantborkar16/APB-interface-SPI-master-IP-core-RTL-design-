@@ -1,0 +1,57 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/sim/baud_genrator
+vslave_select
+!s110 1794405037
+!i10b 1
+!s100 U?l0?ziRD8S:NMWi<>hg_3
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IW3]Ke57FBH6T9K?1eF8Ll2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dE:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/sim/slave_select
+w1794403266
+8E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/slave_select.v
+FE:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/slave_select.v
+!i122 16
+L0 1 114
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1794405037.000000
+!s107 E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/slave_select.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/slave_select.v|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+vslave_select_tb
+!s110 1794405038
+!i10b 1
+!s100 R21[<`hDT<P11fJNfmE=F2
+R0
+IXT1gcFHUHZ>WMGbOgX[Km2
+R1
+R2
+w1794405024
+8E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/slave_select_tb.v
+FE:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/slave_select_tb.v
+!i122 17
+L0 1 79
+R3
+r1
+!s85 0
+31
+!s108 1794405038.000000
+!s107 E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/slave_select_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/slave_select_tb.v|
+!i113 1
+R4
+R5

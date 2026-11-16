@@ -8,50 +8,50 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dE:/Verilog/coding_test/sim/FSM
+dC:/windows/system32
 vbaud_genrator
-!s110 1794246756
+Z0 !s110 1794819749
 !i10b 1
-!s100 ge;kEl[hGBK<`S;N:o>@G3
-Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IX21_HDN_SJ@ofhCM0OS732
-Z1 VDg1SIo80bB@j0V0VzS_@n1
-Z2 dE:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/sim/baud_genrator
-w1794245862
+!s100 a80lMk^eoDnK@Z91N`[cD1
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I`_=JkC@dP^Zm^17[CTYXZ1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dE:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/sim/baud_genrator
+w1794807038
 8E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/baud_genrator.v
 FE:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/baud_genrator.v
-!i122 53
-L0 1 147
-Z3 OV;L;2020.1;71
+!i122 7
+L0 1 146
+Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1794246755.000000
+!s108 1794819749.000000
 !s107 E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/baud_genrator.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/baud_genrator.v|
 !i113 1
-Z4 o-work work
-Z5 tCvgOpt 0
+Z5 o-work work
+Z6 tCvgOpt 0
 vbaud_genrator_tb
-!s110 1794246755
-!i10b 1
-!s100 eGG]BOBND0gW_ST;DnYkH3
 R0
-IdJ4g@CT0m]<EL3A59RCc52
+!i10b 1
+!s100 15X]3aDfWlW2FaZV5FZZ:0
 R1
+IWP9cokA=b0f;ShX`R2zE80
 R2
-w1794246082
+R3
+w1794819734
 8E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/baud_genrator_tb.v
 FE:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/baud_genrator_tb.v
-!i122 52
-L0 1 94
-R3
+!i122 6
+L0 1 95
+R4
 r1
 !s85 0
 31
-!s108 1794246754.000000
+!s108 1794819748.000000
 !s107 E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/baud_genrator_tb.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/baud_genrator_tb.v|
 !i113 1
-R4
 R5
+R6

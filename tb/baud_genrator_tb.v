@@ -59,20 +59,21 @@ module baud_genrator_tb();
 		begin
 			p_clk = 1'b0;
 			//@(negedge p_clk)
-			PRESETn = 1'b1;
-			spi_ss = 1'b1;
-			cpol = 1'b0;
-			cphase = 1'b0;
+			PRESETn = 1'b0;
 			spi_mod = 2'b00;
 			spr = 3'b000;
 			sppr = 3'b000;
-			SPISWAI = 1'b1;
+			SPISWAI = 1'b0;
+			spi_ss = 1'b1;
+			cpol = 1'b0;
+			cphase = 1'b0;
 		end 
 	endtask 
 	
 	task inputs(input [2:0]i, input[2:0]j, input x, input y);
 		begin 
 			//@(negedge p_clk)
+			spi_mod =2'b01;
 			spr = i;
 			sppr = j;
 			cpol = x;
@@ -85,10 +86,10 @@ module baud_genrator_tb();
 	initial begin 
 		start();
 		RESET();
-		inputs (3'd0, 3'd1, 1'b0, 1'b0);
+		inputs (3'd1, 3'd3, 1'b1, 1'b1);
 		#(delay);
-		inputs (3'd1, 3'd2, 1'b1, 1'b0);
-		#(2 * delay) $finish;
+		//inputs (3'd1, 3'd2, 1'b0, 1'b1);
+		//#(2 * delay) $finish;
 	end 
 	
 endmodule 
