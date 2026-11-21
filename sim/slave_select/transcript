@@ -1,0 +1,25 @@
+# Compile of slave_select.v was successful.
+# Compile of slave_select_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.slave_select_tb
+# vsim -gui work.slave_select_tb 
+# Start time: 15:07:52 on Nov 19,2026
+# Loading work.slave_select_tb
+# Loading work.slave_select
+add wave -position insertpoint sim:/slave_select_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: karna  Hostname: ROHAN  ProcessID: 16368
+#           Attempting to use alternate WLF file "./wlftrv6k3n".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftrv6k3n
+add wave -position insertpoint  \
+sim:/slave_select_tb/dut/RD
+add wave -position insertpoint  \
+sim:/slave_select_tb/dut/count
+run
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+quit -sim
+# End time: 15:49:40 on Nov 19,2026, Elapsed time: 0:41:48
+# Errors: 0, Warnings: 4

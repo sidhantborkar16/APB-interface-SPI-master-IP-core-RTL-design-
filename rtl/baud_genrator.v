@@ -125,7 +125,7 @@ module baud_genrator(
 				end 
 			end 
 			else begin 
-				if (s_clk == 0) begin 
+				if (!s_clk) begin 
 					if(count == (BD/2) - 2'b01) begin 
 						MISO_receive_pos <= 1'b1;
 						MISO_receive_neg <= 1'b0;

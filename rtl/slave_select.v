@@ -25,28 +25,28 @@ module slave_select(
 	//counter logic  and slave select logic 
 	always @(posedge p_clk or negedge PRESETn) begin
 		if(!PRESETn) begin
-			count <= 16'b0;
+			count <= 16'hffff;
 			ss_out <= 1'b1;
 		end 
 		else begin 
 			if((spi_mod == RUN || (spi_mod == WAIT && SPISWAI == 0)) && mstr) begin 
-				if(send_data == 0) begin 
+				if(!send_data) begin
 					if(count < (target - 1)) begin 
 						count <= count + 1;
 						ss_out <= 1'b0;
 					end 
 					else begin 
-						count <= 16'b0;
+						count <= 16'hffff;
 						ss_out <= 1'b1;
 					end 
 				end
 				else begin 
 					count <= 16'b0;
-					ss_out <= 1'b1;
+					ss_out <= 1'b0;
 				end
 			end 
 			else begin 
-				count <= 16'b0;
+				count <= 16'hffff;
 				ss_out <= 1'b1;
 			end
 		end 
@@ -59,7 +59,7 @@ module slave_select(
 		end 
 		else begin 
 			if((spi_mod == RUN || (spi_mod == WAIT && SPISWAI == 0)) && mstr) begin 
-				if(send_data == 0) begin 
+				if(!send_data) begin 
 					if(count == target - 1) begin 
 						RD <= 1'b1;
 					end 
