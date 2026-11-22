@@ -49,12 +49,12 @@ module shift_reg_block(
 			count_shift1 <= 3'd7;
 		end
 		else begin 
-			if(!ss) begin 
+			if(!spi_ss) begin 
 				if(cpol ^ cphas) begin 
 					if(lsbfe) begin 
 						if(count_shift0 <= 3'd7) begin 
 							if(MOSI_send_neg) begin 
-								count_shift0 <= count + 1;
+								count_shift0 <= count_shift0 + 1;
 								MOSI <=shift_reg[count_shift0];
 							end
 							else begin 
@@ -70,7 +70,7 @@ module shift_reg_block(
 					else begin 
 						if(count_shift1 >= 3'b0) begin 
 							if(MOSI_send_neg) begin
-								count_shift1 <= count - 1;
+								count_shift1 <= count_shift1 - 1;
 								MOSI <= shift_reg[count_shift1];
 							end 
 							else begin 
@@ -88,7 +88,7 @@ module shift_reg_block(
 					if(lsbfe) begin 
 						if(count_shift0 <= 3'd7) begin 
 							if(MOSI_send_pos) begin
-								count_shift0 <= count + 1;
+								count_shift0 <= count_shift0 + 1;
 								MOSI <= shift_reg[count_shift0];
 							end 
 							else begin 
@@ -97,14 +97,14 @@ module shift_reg_block(
 							end 
 						end 
 						else begin 
-							count_shift0 <= 3'b0
+							count_shift0 <= 3'b0;
 							//MOSI <= 1'b0;
 						end 
 					end 
 					else begin 
 						if(count_shift1 >= 3'b0)begin
 							if(MOSI_send_pos) begin 
-								count_shift1 <= count - 1;
+								count_shift1 <= count_shift1 - 1;
 								MOSI <= shift_reg[count_shift1];
 							end
 							else begin 
@@ -138,7 +138,7 @@ module shift_reg_block(
 			count_temp1 <= 3'd7;
 		end 
 		else begin
-			if(!ss) begin 
+			if(!spi_ss) begin 
 				if(cpol ^ cphas) begin 
 					if(lsbfe) begin
 						if(count_temp0 <= 3'd7) begin
