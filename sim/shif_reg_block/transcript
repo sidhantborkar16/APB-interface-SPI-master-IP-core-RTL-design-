@@ -1,149 +1,27 @@
 # Compile of baud_genrator.v was successful.
-# Compile of shift_reg_block.v failed with 7 errors.
-# Compile of shif_reg_block_tb.v failed with 2 errors.
-# 3 compiles, 2 failed with 9 errors.
-# Compile of baud_genrator.v was successful.
-# Compile of shift_reg_block.v failed with 6 errors.
-# Compile of shif_reg_block_tb.v failed with 2 errors.
-# 3 compiles, 2 failed with 8 errors.
-# Compile of baud_genrator.v was successful.
-# Compile of shift_reg_block.v failed with 5 errors.
-# Compile of shif_reg_block_tb.v failed with 2 errors.
-# 3 compiles, 2 failed with 7 errors.
-# Compile of baud_genrator.v was successful.
-# Compile of shift_reg_block.v was successful.
-# Compile of shif_reg_block_tb.v failed with 2 errors.
-# 3 compiles, 1 failed with 2 errors.
-# Compile of baud_genrator.v was successful.
 # Compile of shift_reg_block.v was successful.
 # Compile of shif_reg_block_tb.v was successful.
 # 3 compiles, 0 failed with no errors.
 vsim -gui work.shif_reg_block_tb
 # vsim -gui work.shif_reg_block_tb 
-# Start time: 18:59:09 on Nov 22,2026
-# Loading work.shif_reg_block_tb
-# ** Error: (vsim-3033) Instantiation of 'shif_reg_block' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /shif_reg_block_tb File: E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/shif_reg_block_tb.v Line: 21
-#         Searched libraries:
-#             E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/sim/shif_reg_block/work
-# Loading work.baud_genrator
-# Error loading design
-# End time: 18:59:11 on Nov 22,2026, Elapsed time: 0:00:02
-# Errors: 1, Warnings: 10
-# Compile of baud_genrator.v was successful.
-# Compile of shift_reg_block.v was successful.
-# Compile of shif_reg_block_tb.v was successful.
-# 3 compiles, 0 failed with no errors.
-vsim -gui work.shif_reg_block_tb
-# vsim -gui work.shif_reg_block_tb 
-# Start time: 19:00:17 on Nov 22,2026
-# Loading work.shif_reg_block_tb
-# Loading work.shift_reg_block
-# Loading work.baud_genrator
-# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'MISO_receive_pos'.
-#    Time: 0 ps  Iteration: 0  Instance: /shif_reg_block_tb/U1 File: E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/shif_reg_block_tb.v Line: 53
-# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'MISO_receive_neg'.
-#    Time: 0 ps  Iteration: 0  Instance: /shif_reg_block_tb/U1 File: E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/shif_reg_block_tb.v Line: 53
-# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'MOSI_send_pos'.
-#    Time: 0 ps  Iteration: 0  Instance: /shif_reg_block_tb/U1 File: E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/shif_reg_block_tb.v Line: 53
-# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'MOSI_send_neg'.
-#    Time: 0 ps  Iteration: 0  Instance: /shif_reg_block_tb/U1 File: E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/shif_reg_block_tb.v Line: 53
-# Error loading design
-# End time: 19:00:18 on Nov 22,2026, Elapsed time: 0:00:01
-# Errors: 4, Warnings: 2
-# Compile of baud_genrator.v was successful.
-# Compile of shift_reg_block.v was successful.
-# Compile of shif_reg_block_tb.v was successful.
-# 3 compiles, 0 failed with no errors.
-vsim -gui work.shif_reg_block_tb
-# vsim -gui work.shif_reg_block_tb 
-# Start time: 19:03:58 on Nov 22,2026
-# Loading work.shif_reg_block_tb
-# Loading work.baud_genrator
-# Loading work.shift_reg_block
-# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'MISO_receive_pos'.
-#    Time: 0 ps  Iteration: 0  Instance: /shif_reg_block_tb/U1 File: E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/shif_reg_block_tb.v Line: 35
-# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'MISO_receive_neg'.
-#    Time: 0 ps  Iteration: 0  Instance: /shif_reg_block_tb/U1 File: E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/shif_reg_block_tb.v Line: 35
-# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'MOSI_send_pos'.
-#    Time: 0 ps  Iteration: 0  Instance: /shif_reg_block_tb/U1 File: E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/shif_reg_block_tb.v Line: 35
-# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'MOSI_send_neg'.
-#    Time: 0 ps  Iteration: 0  Instance: /shif_reg_block_tb/U1 File: E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/shif_reg_block_tb.v Line: 35
-# Error loading design
-# End time: 19:04:00 on Nov 22,2026, Elapsed time: 0:00:02
-# Errors: 4, Warnings: 2
-# Compile of baud_genrator.v was successful.
-# Compile of shift_reg_block.v was successful.
-# Compile of shif_reg_block_tb.v was successful.
-# 3 compiles, 0 failed with no errors.
-vsim -gui work.shif_reg_block_tb
-# vsim -gui work.shif_reg_block_tb 
-# Start time: 19:10:45 on Nov 22,2026
+# Start time: 14:10:50 on Nov 23,2026
 # Loading work.shif_reg_block_tb
 # Loading work.baud_genrator
 # Loading work.shift_reg_block
 add wave -position insertpoint sim:/shif_reg_block_tb/*
-run -all
-# ** Note: $finish    : E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/shif_reg_block_tb.v(156)
-#    Time: 5 ns  Iteration: 0  Instance: /shif_reg_block_tb
-# 1
-# Break in Module shif_reg_block_tb at E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/shif_reg_block_tb.v line 156
 add wave -position insertpoint  \
 sim:/shif_reg_block_tb/U1/s_clk
 add wave -position insertpoint  \
 sim:/shif_reg_block_tb/dut/shift_reg \
-sim:/shif_reg_block_tb/dut/temp_reg
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+sim:/shif_reg_block_tb/dut/temp_reg \
+sim:/shif_reg_block_tb/dut/count_shift0 \
+sim:/shif_reg_block_tb/dut/count_shift1 \
+sim:/shif_reg_block_tb/dut/count_temp0 \
+sim:/shif_reg_block_tb/dut/count_temp1
 run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
 # ** Note: $finish    : E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/shif_reg_block_tb.v(156)
 #    Time: 5 ns  Iteration: 0  Instance: /shif_reg_block_tb
 # 1
 # Break in Module shif_reg_block_tb at E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/shif_reg_block_tb.v line 156
-# Compile of baud_genrator.v was successful.
-# Compile of shift_reg_block.v was successful.
-# Compile of shif_reg_block_tb.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.shif_reg_block_tb
-# Loading work.baud_genrator
-# Loading work.shift_reg_block
-run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# ** Note: $finish    : E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/shif_reg_block_tb.v(156)
-#    Time: 5 ns  Iteration: 0  Instance: /shif_reg_block_tb
-# 1
-# Break in Module shif_reg_block_tb at E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/shif_reg_block_tb.v line 156
-# WARNING: No extended dataflow license exists
-restart
-# Compile of baud_genrator.v was successful.
-# Compile of shift_reg_block.v was successful.
-# Compile of shif_reg_block_tb.v failed with 1 errors.
-# 3 compiles, 1 failed with 1 error.
-# Compile of baud_genrator.v was successful.
-# Compile of shift_reg_block.v was successful.
-# Compile of shif_reg_block_tb.v failed with 1 errors.
-# 3 compiles, 1 failed with 1 error.
-# Compile of baud_genrator.v was successful.
-# Compile of shift_reg_block.v was successful.
-# Compile of shif_reg_block_tb.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.shif_reg_block_tb
-# Loading work.baud_genrator
-# Loading work.shift_reg_block
-run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# ** Note: $finish    : E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/shif_reg_block_tb.v(156)
-#    Time: 5 ns  Iteration: 0  Instance: /shif_reg_block_tb
-# 1
-# Break in Module shif_reg_block_tb at E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/shif_reg_block_tb.v line 156
+# End time: 16:19:04 on Nov 23,2026, Elapsed time: 2:08:14
+# Errors: 0, Warnings: 2
