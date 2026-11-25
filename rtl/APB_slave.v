@@ -12,19 +12,19 @@ module APB_slave(
 	input receive_data,
 	
 	//output signal 
-	output reg PRDATA, //done 
+	output reg [7:0] PRDATA, //done 
 	output MSTR, //done 
 	output cpol, //done 
 	output cphase, //done 
 	output LSBFE, //done 
 	output SPISWAI, //done 
 	output [2:0] SPR , SPPR, //done 
-	output SPI_intrrupt_req,
+	output reg SPI_intrrupt_req, //done 
 	output PREADY, //done 
 	output PSLVERR, //done 
 	output reg send_data, //done 
 	output reg [7:0]MOSI_data,// done 
-	output [1:0]spi_mod //done 
+	output reg [1:0]spi_mod //done 
 );
 
 	//internal veriable
@@ -52,7 +52,7 @@ module APB_slave(
 			  
 	//parameter defination for the APB FSM logic 
 	parameter IDEAL = 2'b00,
-			  SETUP = 2'b10,
+			  SETUP = 2'b01,
 			  ENABLE = 2'b10;
 			  
 	//parameter defination for the APB FSM logic 
@@ -61,7 +61,7 @@ module APB_slave(
 			  STOP = 2'b10;
 	
 	//APB_PS FSM logic 
-	always @(posedge p_clk or PRESETn) begin 
+	always @(posedge p_clk or negedge PRESETn) begin 
 		if(!PRESETn) begin 
 			APB_PS <= IDEAL;
 		end 
@@ -74,40 +74,40 @@ module APB_slave(
 		case(APB_PS)
 			IDEAL : begin 
 				if(PSEL && !PENABLE)begin 
-					APB_NS <= SETUP;
+					APB_NS = SETUP;
 				end 
 				else begin 
-					APB_NS <= IDEAL;
+					APB_NS = IDEAL;
 				end 
 			end
 			
 			SETUP : begin 
 				if(PSEL && PENABLE)begin 
-					APB_NS <= ENABLE;
+					APB_NS = ENABLE;
 				end 
 				else if (PSEL && !PENABLE) begin 
-					APB_NS <= SETUP;
+					APB_NS = SETUP;
 				end 
 				else begin 
-					APB_NS <= IDEAL;
+					APB_NS = IDEAL;
 				end 
 			end
 			
 			ENABLE : begin 
 				if(PSEL)begin 
-					APB_NS <= SETUP;
+					APB_NS = SETUP;
 				end 
 				else begin 
-					APB_NS <= IDEAL;
+					APB_NS = IDEAL;
 				end 
 			end
 			
-			default : APB_NS <= IDEAL;
+			default : APB_NS = IDEAL;
 		endcase 
 	end 
 	
 	//spi_mod logic
-	always @(posedge p_clk or PRESETn) begin
+	always @(posedge p_clk or negedge PRESETn) begin
 		if(!PRESETn) begin 
 			spi_mod <= RUN;
 		end 
@@ -121,38 +121,38 @@ module APB_slave(
 		case(spi_mod)
 			RUN : begin 
 				if(!spe) begin 
-					SPI_NS <= WAIT;
+					SPI_NS = WAIT;
 				end 
 				else begin 
-					SPI_NS <= RUN;
+					SPI_NS = RUN;
 				end 
 			end 
 			
 			WAIT : begin 
 				if(spe) begin 
-					SPI_NS <= RUN;
+					SPI_NS = RUN;
 				end 
 				else if( SPISWAI) begin
-					SPI_NS <= STOP;
+					SPI_NS = STOP;
 				end 
 				else begin 
-					SPI_NS <= WAIT;
+					SPI_NS = WAIT;
 				end 
 			end 
 			
 			STOP : begin 
 				if(spe) begin 
-					SPI_NS <= RUN;
+					SPI_NS = RUN;
 				end 
 				else if(!SPISWAI) begin 
-					SPI_NS <= WAIT;
+					SPI_NS = WAIT;
 				end 
 				else begin 
-					SPI_NS <= STOP;
+					SPI_NS = STOP;
 				end 
 			end 
 	
-			default : SPI_NS <= RUN;
+			default : SPI_NS = RUN;
 			
 		endcase 
 	end 
@@ -181,7 +181,7 @@ module APB_slave(
 				end 
 			end 
 			else begin 
-				CR1 <= 8'b00000100;
+				CR1 <= CR1;
 			end 
 		end 
 	end 
@@ -201,7 +201,7 @@ module APB_slave(
 				end 
 			end 
 			else begin 
-				CR2 <= 8'b00000000;
+				CR2 <= CR2;
 			end 
 		end 
 	end 
@@ -221,7 +221,7 @@ module APB_slave(
 				end 
 			end 
 			else begin 
-				BR <= 8'b00000000;
+				BR <= BR;
 			end 
 		end 
 	end 
@@ -270,8 +270,8 @@ module APB_slave(
 	assign sptef = (DR == 8'b0)? 1'b1 : 1'b0;
 	assign spif = (DR != 8'b0)? 1'b1 : 1'b0;
 	assign ssoe = CR1[1];
-	assign spr = BR[2:0];
-	assign sppr = BR[6:4];
+	assign SPR = BR[2:0];
+	assign SPPR = BR[6:4];
 	assign SPISWAI = CR2[1];
 	assign MSTR = CR1[4];
 	assign cpol = CR1[3];
@@ -294,7 +294,8 @@ module APB_slave(
 				3'b010 : PRDATA = BR;
 				3'b011 : PRDATA = SR;
 				3'b101 : PRDATA = DR;
-				default : PRDATA = 8'b0;
+				3'b100 , 3'b110 , 3'b111 : PRDATA = 8'b00000000;
+				//default : PRDATA = 8'b0;
 			endcase 
 		end 
 	end 
@@ -305,12 +306,12 @@ module APB_slave(
 			send_data <= 1'b0;
 		end 
 		else begin 
-			if(w_en) begin 
+			if(!w_en) begin 
 				if((spi_mod == RUN || spi_mod == WAIT) && (DR != MISO_data) && (DR == PWDATA)) begin 
-					send_data = 1'b1;
+					send_data <= 1'b1;
 				end 
 				else begin 
-					send_data = 1'b0;
+					send_data <= 1'b0;
 				end 
 			end 
 			else begin 

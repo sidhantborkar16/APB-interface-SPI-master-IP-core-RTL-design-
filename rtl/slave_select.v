@@ -60,7 +60,7 @@ module slave_select(
 		else begin 
 			if((spi_mod == RUN || (spi_mod == WAIT && SPISWAI == 0)) && mstr) begin 
 				if(!send_data) begin 
-					if(count == target - 1) begin 
+					if(count == target - 2) begin 
 						RD <= 1'b1;
 					end 
 					else begin 

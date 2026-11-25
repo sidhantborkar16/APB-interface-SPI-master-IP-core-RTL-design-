@@ -128,7 +128,7 @@ module shift_reg_block(
 	end
 
 	//data loading into the MISO_data
-	assign MISO_data = (receive_data) ? temp_reg : 1'bz;
+	assign MISO_data = (receive_data) ? temp_reg : 1'b0;
 	
 	//MISO 1 bit loading into temp_reg
 	always @(posedge p_clk or negedge PRESETn) begin 

@@ -1,0 +1,54 @@
+# Load canceled
+# Compile of slave_select.v was successful.
+# Compile of slave_select_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.slave_select_tb
+# vsim -gui work.slave_select_tb 
+# Start time: 23:58:04 on Nov 24,2026
+# Loading work.slave_select_tb
+# Loading work.slave_select
+add wave -position insertpoint sim:/slave_select_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: karna  Hostname: ROHAN  ProcessID: 16368
+#           Attempting to use alternate WLF file "./wlftf9qwqk".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftf9qwqk
+add wave -position insertpoint  \
+sim:/slave_select_tb/dut/target \
+sim:/slave_select_tb/dut/RD \
+sim:/slave_select_tb/dut/count
+run -all
+# Compile of slave_select.v was successful.
+# Compile of slave_select_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.slave_select_tb
+# Loading work.slave_select
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $finish    : E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/slave_select_tb.v(77)
+#    Time: 340 ps  Iteration: 0  Instance: /slave_select_tb
+# 1
+# Break in Module slave_select_tb at E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/slave_select_tb.v line 77
+restart
+# Compile of slave_select.v was successful.
+# Compile of slave_select_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.slave_select_tb
+# Loading work.slave_select
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: $finish    : E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/slave_select_tb.v(77)
+#    Time: 340 ps  Iteration: 0  Instance: /slave_select_tb
+# 1
+# Break in Module slave_select_tb at E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/slave_select_tb.v line 77
+quit -sim
+# End time: 00:01:38 on Nov 25,2026, Elapsed time: 0:03:34
+# Errors: 0, Warnings: 1

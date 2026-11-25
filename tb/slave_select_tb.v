@@ -74,6 +74,7 @@ module slave_select_tb();
 		//#(delay);
 		//inputs(12'd4);
 		//#(2*delay) $finish;
+		#300 $finish;
 	end 
 	
 endmodule 

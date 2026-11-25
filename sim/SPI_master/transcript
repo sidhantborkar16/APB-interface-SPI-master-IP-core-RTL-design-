@@ -1,0 +1,26 @@
+# Compile of SPI_master.v was successful.
+# Compile of SPI_master_tb.v was successful.
+# Compile of APB_slave.v was successful.
+# Compile of baud_genrator.v was successful.
+# Compile of shift_reg_block.v was successful.
+# Compile of slave_select.v was successful.
+# 6 compiles, 0 failed with no errors.
+vsim -gui work.SPI_master_tb
+# vsim -gui work.SPI_master_tb 
+# Start time: 13:29:17 on Nov 25,2026
+# Loading work.SPI_master_tb
+# Loading work.SPI_master
+# Loading work.baud_genrator
+# Loading work.slave_select
+# Loading work.shift_reg_block
+# Loading work.APB_slave
+add wave -position insertpoint sim:/SPI_master_tb/*
+add wave -position insertpoint sim:/SPI_master_tb/dut/UNIT1/*
+add wave -position insertpoint sim:/SPI_master_tb/dut/UNIT2/*
+add wave -position insertpoint sim:/SPI_master_tb/dut/UNIT3/*
+add wave -position insertpoint sim:/SPI_master_tb/dut/UNIT4/*
+run -all
+# ** Note: $finish    : E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/SPI_master_tb.v(154)
+#    Time: 1110 ps  Iteration: 0  Instance: /SPI_master_tb
+# 1
+# Break in Module SPI_master_tb at E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/SPI_master_tb.v line 154
