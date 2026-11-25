@@ -1,0 +1,30 @@
+# Compile of APB_slave.v was successful.
+# Compile of APB_slave_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.APB_slave_tb
+# vsim -gui work.APB_slave_tb 
+# Start time: 22:34:07 on Nov 25,2026
+# Loading work.APB_slave_tb
+# Loading work.APB_slave
+add wave -position insertpoint sim:/APB_slave_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: karna  Hostname: ROHAN  ProcessID: 14056
+#           Attempting to use alternate WLF file "./wlftnaatfk".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftnaatfk
+add wave -position insertpoint  \
+sim:/APB_slave_tb/dut/w_en \
+sim:/APB_slave_tb/dut/r_en \
+sim:/APB_slave_tb/dut/CR1 \
+sim:/APB_slave_tb/dut/CR2 \
+sim:/APB_slave_tb/dut/BR \
+sim:/APB_slave_tb/dut/SR \
+sim:/APB_slave_tb/dut/DR
+run -all
+# ** Note: $finish    : E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/APB_slave_tb.v(258)
+#    Time: 800 ps  Iteration: 0  Instance: /APB_slave_tb
+# 1
+# Break in Module APB_slave_tb at E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/APB_slave_tb.v line 258
+quit -sim
+# End time: 22:37:28 on Nov 25,2026, Elapsed time: 0:03:21
+# Errors: 0, Warnings: 4
