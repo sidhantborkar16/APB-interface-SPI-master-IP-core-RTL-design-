@@ -10,23 +10,23 @@ z2
 cModel Technology
 dE:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/sim/APB_slave
 vAPB_slave
-Z0 !s110 1795593544
+Z0 !s110 1795605810
 !i10b 1
 !s100 KiVL25_4:>h6DC6YLDgUD1
 Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
 IJ__E>Zd8a07E?STMaz6<a1
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 Z3 dE:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/sim/SPI_master
-w1795553280
+w1795603090
 8E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/APB_slave.v
 FE:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/APB_slave.v
-!i122 110
+!i122 116
 L0 1 358
 Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1795593543.000000
+Z5 !s108 1795605809.000000
 !s107 E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/APB_slave.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/APB_slave.v|
 !i113 1
@@ -41,85 +41,85 @@ R1
 IjogT@SJ<b0_bBVG?7`>Md0
 R2
 R3
-w1795076822
+w1795602976
 8E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/baud_genrator.v
 FE:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/baud_genrator.v
-!i122 111
+!i122 117
 L0 1 146
 R4
 r1
 !s85 0
 31
-Z8 !s108 1795593544.000000
+!s108 1795605810.000000
 !s107 E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/baud_genrator.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/baud_genrator.v|
 !i113 1
 R6
 R7
 vshift_reg_block
-Z9 !s110 1795593545
+Z8 !s110 1795605811
 !i10b 1
 !s100 XD282O=:QH4jWR0T?EE4e2
 R1
 I9maXGdYbbNhcYkHi^>d^Q1
 R2
 R3
-w1795544320
+w1795602980
 8E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/shift_reg_block.v
 FE:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/shift_reg_block.v
-!i122 112
+!i122 118
 L0 1 211
 R4
 r1
 !s85 0
 31
-R8
+Z9 !s108 1795605811.000000
 !s107 E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/shift_reg_block.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/shift_reg_block.v|
 !i113 1
 R6
 R7
 vslave_select
-R9
+R8
 !i10b 1
 !s100 ]B3U?mFZfD`9I2lY4n_MJ0
 R1
 I;oPo8NNR7e1Q8hk[OZEBc3
 R2
 R3
-w1795545012
+w1795602982
 8E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/slave_select.v
 FE:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/slave_select.v
-!i122 113
+!i122 119
 L0 1 114
 R4
 r1
 !s85 0
 31
-!s108 1795593545.000000
+R9
 !s107 E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/slave_select.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/slave_select.v|
 !i113 1
 R6
 R7
 vSPI_master
-!s110 1795593542
+Z10 !s110 1795605809
 !i10b 1
 !s100 _:DRSU<jUk55O3_M9zW`M2
 R1
 IUPfQziYME]3WAo?0KJzC>2
 R2
 R3
-w1795543210
+w1795602974
 8E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/SPI_master.v
 FE:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/SPI_master.v
-!i122 108
+!i122 114
 L0 1 122
 R4
 r1
 !s85 0
 31
-!s108 1795593541.000000
+!s108 1795605808.000000
 !s107 E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/SPI_master.v|
 !s90 -reportprogress|300|-work|work|-stats=none|E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/SPI_master.v|
 !i113 1
@@ -127,17 +127,17 @@ R6
 R7
 n@s@p@i_master
 vSPI_master_tb
-!s110 1795593543
+R10
 !i10b 1
 !s100 _ghQ=XJkJ_WS<?Q_ZHmYc1
 R1
 I`hXDY0a5X2^OUX4F=JBi31
 R2
 R3
-w1795542754
+w1795602972
 8E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/SPI_master_tb.v
 FE:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/SPI_master_tb.v
-!i122 109
+!i122 115
 L0 1 156
 R4
 r1
