@@ -19,12 +19,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	SPI_master_tb
 
-} {} {}} {E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/shift_reg_block.v} {1 {vlog -work work -stats=none {E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/shift_reg_block.v}
+} {} {}} {E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/APB_slave.v} {1 {vlog -work work -stats=none {E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/APB_slave.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module shift_reg_block
+-- Compiling module APB_slave
 
 Top level modules:
-	shift_reg_block
+	APB_slave
 
 } {} {}} {E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/baud_genrator.v} {1 {vlog -work work -stats=none {E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/baud_genrator.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -33,11 +33,11 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	baud_genrator
 
-} {} {}} {E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/APB_slave.v} {1 {vlog -work work -stats=none {E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/APB_slave.v}
+} {} {}} {E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/shift_reg_block.v} {1 {vlog -work work -stats=none {E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/rtl/shift_reg_block.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module APB_slave
+-- Compiling module shift_reg_block
 
 Top level modules:
-	APB_slave
+	shift_reg_block
 
 } {} {}}
