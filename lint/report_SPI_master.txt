@@ -1,0 +1,169 @@
+
+  -----------------------------------------------------------------------------
+  Report Summary
+  -----------------------------------------------------------------------------
+  Product Info
+    Name    : VC Static Master Shell
+    Version : X-2025.06 -- May 29, 2025
+
+  Report Info
+    Created : Nov 25, 2026  02:23:40
+
+    TopLevelModule: SPI_master
+
+  -----------------------------------------------------------------------------
+  Management Summary
+  -----------------------------------------------------------------------------
+  Stage             Family      Fatals    Errors  Warnings     Infos
+  -----             --------  --------  --------  --------  --------
+  DESIGN_READ       DESIGN           0         0         1         0
+  LANGUAGE_CHECK    CODING           0         0         0         1
+  STRUCTURAL_CHECK  CODING           0         0         0        10
+  -----             --------  --------  --------  --------  --------
+  Total                              0         0         1        11
+
+
+  -----------------------------------------------------------------------------
+  Tree Summary
+  -----------------------------------------------------------------------------
+  Severity  Stage             Tag                  Count
+  --------  -----             -------------------  -----
+  warning   DESIGN_READ       DB_CANT_LOAD             1
+  info      LANGUAGE_CHECK    ReportPortInfo-ML        1
+  info      STRUCTURAL_CHECK  RegInputOutput-ML       10
+  --------  -----             -------------------  -----
+  Total                                               12
+
+
+
+  -----------------------------------------------------------------------------
+  DB_CANT_LOAD  (1 warning/0 waived)
+  -----------------------------------------------------------------------------
+  Tag            : DB_CANT_LOAD
+  Violation      : DESIGN:1
+  MessageContent : Invalid link library file specified. Cannot load link library './/'
+
+
+  -----------------------------------------------------------------------------
+  RegInputOutput-ML  (10 infos/0 waived)
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:1
+  Goal                : lint_rtl
+  FileName            : ./../rtl/APB_slave.v
+  LineNumber          : 162
+  Statement           : assign r_en = (!PWRITE && APB_PS == ENABLE)? 1'b1 : 1'b0;
+  Signal              : PWRITE
+  Module              : SPI_master
+  DesignObjHierarchy  : SPI_master
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:2
+  Goal                : lint_rtl
+  FileName            : ./../rtl/APB_slave.v
+  LineNumber          : 85
+  Statement           : 		if(PSEL && PENABLE)begin 
+  Signal              : PENABLE
+  Module              : SPI_master
+  DesignObjHierarchy  : SPI_master
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:3
+  Goal                : lint_rtl
+  FileName            : ./../rtl/APB_slave.v
+  LineNumber          : 98
+  Statement           : 		APB_NS = SETUP;
+  Signal              : PSEL
+  Module              : SPI_master
+  DesignObjHierarchy  : SPI_master
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:4
+  Goal                : lint_rtl
+  FileName            : ./../rtl/shift_reg_block.v
+  LineNumber          : 146
+  Statement           : 				temp_reg[count_temp0] <= MISO;
+  Signal              : MISO
+  Module              : SPI_master
+  DesignObjHierarchy  : SPI_master
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:5
+  Goal                : lint_rtl
+  FileName            : ./../rtl/SPI_master.v
+  LineNumber          : 15
+  Statement           : output SPI_intrrupt_req,
+  Signal              : SPI_intrrupt_req
+  Module              : SPI_master
+  DesignObjHierarchy  : SPI_master
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:6
+  Goal                : lint_rtl
+  FileName            : ./../rtl/SPI_master.v
+  LineNumber          : 16
+  Statement           : output PREADY,
+  Signal              : PREADY
+  Module              : SPI_master
+  DesignObjHierarchy  : SPI_master
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:7
+  Goal                : lint_rtl
+  FileName            : ./../rtl/SPI_master.v
+  LineNumber          : 17
+  Statement           : output PSLVERR
+  Signal              : PSLVERR
+  Module              : SPI_master
+  DesignObjHierarchy  : SPI_master
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:8
+  Goal                : lint_rtl
+  FileName            : ./../rtl/APB_slave.v
+  LineNumber          : 176
+  Statement           : 		if (PADDR == 3'b000) begin 
+  Signal              : PADDR[2:0]
+  Module              : SPI_master
+  DesignObjHierarchy  : SPI_master
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:9
+  Goal                : lint_rtl
+  FileName            : ./../rtl/APB_slave.v
+  LineNumber          : 247
+  Statement           : 		DR <= PWDATA;
+  Signal              : PWDATA[7:0]
+  Module              : SPI_master
+  DesignObjHierarchy  : SPI_master
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:10
+  Goal                : lint_rtl
+  FileName            : ./../rtl/SPI_master.v
+  LineNumber          : 12
+  Statement           : output [7:0]PRDATA,
+  Signal              : PRDATA[7:0]
+  Module              : SPI_master
+  DesignObjHierarchy  : SPI_master
+
+  -----------------------------------------------------------------------------
+  ReportPortInfo-ML  (1 info/0 waived)
+  -----------------------------------------------------------------------------
+  Tag           : ReportPortInfo-ML
+  Description   : Port Information for top design unit has been generated. For details see report ReportPortInfo.rpt
+  Violation     : Lint:11
+  Goal          : lint_rtl
+  FileName      : /home2/B136/SidhantNB/VLSI_RN_OFFLINE/Design_project/lint/vcst_rtdb/.internal/spyglass/vc_lint0/SPI_master/VC_GOAL0/spyglass_reports/morelint/ReportPortInfo
+  LineNumber    : 1
+  Statement     : #     Comment          : Report Top Level Module Port Info
