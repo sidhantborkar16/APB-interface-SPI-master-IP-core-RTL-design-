@@ -29,3 +29,5 @@ run -all
 #    Time: 1110 ps  Iteration: 0  Instance: /SPI_master_tb
 # 1
 # Break in Module SPI_master_tb at E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/SPI_master_tb.v line 154
+# End time: 23:00:13 on Nov 25,2026, Elapsed time: 0:11:05
+# Errors: 0, Warnings: 4
