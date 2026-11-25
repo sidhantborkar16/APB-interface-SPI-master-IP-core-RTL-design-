@@ -59,7 +59,7 @@ The project includes:
 - Synthesized gate-level Verilog netlist.
 - Synopsys Design Vision schematic views.
 
-The project is implemented and has undergone simulation, linting, and synthesis. Further protocol-level verification and timing analysis remain important before production sign-off.
+The project has undergone simulation, linting, and synthesis. Further protocol-level verification and timing analysis remain important before production sign-off.
 
 ---
 
@@ -71,7 +71,6 @@ The design consists of four functional blocks integrated through the top-level S
 
 ```text
                        APB MASTER
-                           |
                            |
                    APB INTERFACE
                            |
@@ -206,7 +205,7 @@ Responsibilities:
 - Status flag generation.
 - Interrupt request generation.
 
-The RTL contains two state machines:
+The RTL contains two state machines.
 
 **APB State Machine**
 
@@ -450,29 +449,13 @@ Individual testbenches are provided for the functional blocks and top-level inte
 | `tb/shif_reg_block_tb.v` | Shift-register verification |
 | `tb/SPI_master_tb.v` | Top-level SPI Master verification |
 
-### Simulation Results
+### Top-Level Simulation Result
 
-The repository includes the following simulation waveform images.
+The following waveform represents the integrated top-level SPI Master simulation.
 
-#### APB Slave
+![SPI Master Top-Level Simulation](Results/SPI_master_result.png)
 
-![APB Slave Simulation](Results/APB_slave_result.png)
-
-#### Baud Rate Generator
-
-![Baud Rate Generator Simulation](Results/baud_genrator_result.png)
-
-#### Slave Select Controller
-
-![Slave Select Simulation](Results/slave_select_result.png)
-
-#### Shift Register Block
-
-![Shift Register Simulation](Results/shift_register_result.png)
-
-#### SPI Master Top-Level
-
-![SPI Master Simulation](Results/SPI_master_result.png)
+Individual block-level simulation result images are available in the `Results/` directory. They are retained for reference and are not embedded in this README.
 
 ### Running Simulation in ModelSim
 
@@ -567,14 +550,6 @@ The informational messages include:
 
 The library configuration should be corrected and SpyGlass rerun before claiming a warning-free lint result.
 
-### Lint Report Location
-
-```text
-lint/
-├── SPI_master.tcl
-└── report_SPI_master.txt
-```
-
 ---
 
 ## 10. Synthesis
@@ -615,23 +590,19 @@ The generated netlist identifies:
 - Version: X-2025.06.
 - Top-level design: `SPI_master`.
 
-### Synthesized Schematic
+### Top-Level Synthesized Schematic
 
 The synthesized design was inspected using **Synopsys Design Vision**.
 
-#### Synthesized Logic Schematic
+The following image shows only the outer top-level `SPI_master` module schematic.
 
-![Synthesized Logic Schematic](Results/Synthesis/synthesized_logic_schematic.png)
+![SPI Master Top-Level Synthesized Schematic](Results/Synthesis/top_level_spi_master.png)
 
-#### SPI Master Top-Level Schematic
+The schematic shows the top-level module boundary and its APB/SPI input and output ports.
 
-![SPI Master Top-Level Schematic](Results/Synthesis/top_level_spi_master.png)
+**Note:** The schematic demonstrates the synthesized top-level design interface. It does not establish area, timing closure, or power performance.
 
-The schematic views show the synthesized logic and the top-level SPI Master interface.
-
-**Note:** Schematic images demonstrate the generated design structure. They do not establish area, timing closure, or power performance.
-
-Quantitative synthesis metrics should be added when the corresponding Design Compiler reports and constraints are available.
+The repository snapshot does not include the technology library, timing constraints (SDC), or complete Design Compiler area/timing/QoR reports. Therefore, quantitative area, delay, power, and timing-closure claims are not made here.
 
 ---
 
@@ -675,9 +646,9 @@ APB-interface-SPI-master-IP-core-RTL-design/
 │   ├── SPI_master_result.png
 │   ├── baud_genrator_result.png
 │   ├── shift_register_result.png
+│   ├── slave_select_result.png
 │   │
 │   └── Synthesis/
-│       ├── synthesized_logic_schematic.png
 │       └── top_level_spi_master.png
 │
 ├── Reference_materials/
@@ -691,6 +662,8 @@ APB-interface-SPI-master-IP-core-RTL-design/
 ├── LICENSE
 └── README.md
 ```
+
+The `Results/` directory contains individual block-level simulation images and the top-level synthesis schematic. Only the integrated simulation waveform and outer synthesis schematic are embedded in this README.
 
 ---
 
@@ -758,4 +731,3 @@ B.Tech – Electronics & Telecommunication Engineering
 **Simulation:** ModelSim  
 **Lint:** Synopsys VC SpyGlass  
 **Synthesis:** Synopsys Design Compiler
-
