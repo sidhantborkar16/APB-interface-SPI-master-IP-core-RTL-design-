@@ -329,7 +329,7 @@ module APB_slave(
 			if((spi_mod == RUN || spi_mod == WAIT) && (DR != MISO_data) && (DR == PWDATA)) begin 
 				MOSI_data <= DR;
 			end 
-			else begin 
+			else begin
 				MOSI_data <= MOSI_data;
 			end 
 		end 

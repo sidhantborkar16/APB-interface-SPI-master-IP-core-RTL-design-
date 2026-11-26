@@ -7,7 +7,7 @@
 # 6 compiles, 0 failed with no errors.
 vsim -gui work.SPI_master_tb
 # vsim -gui work.SPI_master_tb 
-# Start time: 22:49:08 on Nov 25,2026
+# Start time: 14:45:45 on Nov 26,2026
 # Loading work.SPI_master_tb
 # Loading work.SPI_master
 # Loading work.baud_genrator
@@ -17,17 +17,15 @@ vsim -gui work.SPI_master_tb
 add wave -position insertpoint sim:/SPI_master_tb/*
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: karna  Hostname: ROHAN  ProcessID: 19612
-#           Attempting to use alternate WLF file "./wlft9kdwcg".
+#           Attempting to use alternate WLF file "./wlftf650az".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft9kdwcg
+#           Using alternate file: ./wlftf650az
 add wave -position insertpoint sim:/SPI_master_tb/dut/UNIT1/*
 add wave -position insertpoint sim:/SPI_master_tb/dut/UNIT2/*
 add wave -position insertpoint sim:/SPI_master_tb/dut/UNIT3/*
 add wave -position insertpoint sim:/SPI_master_tb/dut/UNIT4/*
 run -all
 # ** Note: $finish    : E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/SPI_master_tb.v(154)
-#    Time: 1110 ps  Iteration: 0  Instance: /SPI_master_tb
+#    Time: 1160 ps  Iteration: 0  Instance: /SPI_master_tb
 # 1
 # Break in Module SPI_master_tb at E:/Maven silicon/Design_phase_project/APB-interface-SPI-master-IP-core-RTL-design-/tb/SPI_master_tb.v line 154
-# End time: 23:00:13 on Nov 25,2026, Elapsed time: 0:11:05
-# Errors: 0, Warnings: 4

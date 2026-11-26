@@ -91,7 +91,7 @@ module SPI_master_tb();
 	
 	task miso();
 		begin 
-			MISO = 1'b0;
+			MISO = 1'bz;
 			wait(~SS) begin 
 				@(negedge s_clk);
 	        	MISO=1'b1;
@@ -145,7 +145,7 @@ module SPI_master_tb();
 		WRITE(8'b11001101 , DR);
 
 		miso();
-		
+		#50;
 		READ(CR1);
 		READ(CR2);
 		READ(BR);
