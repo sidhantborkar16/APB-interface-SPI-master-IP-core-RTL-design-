@@ -1,3 +1,10 @@
+<p align="center">
+  <img
+    src="Results/APB-Based%20SPI%20Master%20IP%20Core%20Banner.png"
+    alt="APB-Based SPI Master IP Core Banner"
+    width="100%"
+  />
+</p>
 
 # APB-Based SPI Master IP Core
 
@@ -653,9 +660,7 @@ APB-interface-SPI-master-IP-core-RTL-design/
 │
 ├── Reference_materials/
 │   ├── ARM_AMBA3_APB.pdf
-│   ├── ARM_AMBA3_APB.txt
 │   ├── S12SPIV3.pdf
-│   └── S12SPIV3.txt
 │
 ├── lib/
 │
